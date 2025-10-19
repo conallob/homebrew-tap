@@ -5,23 +5,23 @@
 class McpSshWingman < Formula
   desc "MCP Server for read-only access to Unix shell prompts via tmux"
   homepage "https://github.com/conallob/mcp-ssh-wingman"
-  version "0.0.11"
+  version "0.0.12"
   license "BSD-3-Clause"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.11/mcp-ssh-wingman_0.0.11_Darwin_x86_64.tar.gz"
-      sha256 "341864fcefd80cbeb71bb0df7dd41fa1d11d2634eafa286e49d948116c3f54e4"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Darwin_x86_64.tar.gz"
+      sha256 "3c368e48f287b11e119a8d38ccb3f0199b815593282ccf3d230f2b07d76d036d"
 
       def install
         bin.install "mcp-ssh-wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.11/mcp-ssh-wingman_0.0.11_Darwin_arm64.tar.gz"
-      sha256 "f8001e18720321d3b65ff665b214eec595e73f1e5ed60fa884559f2e13f95cc5"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Darwin_arm64.tar.gz"
+      sha256 "800486548f978f5f6c3e6ddd4a8253dd50a3deaeafc4111fa06dc0bde1bf124a"
 
       def install
         bin.install "mcp-ssh-wingman"
@@ -31,15 +31,15 @@ class McpSshWingman < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.11/mcp-ssh-wingman_0.0.11_Linux_x86_64.tar.gz"
-      sha256 "4b1199bdcf09640fe956d8ab9344ae3c2276b98c30b1cad8af8560f55135b534"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Linux_x86_64.tar.gz"
+      sha256 "9a3fdfe642cdbfe24f689a18d48ced9370540cdb59070f67fec092b000968ce9"
       def install
         bin.install "mcp-ssh-wingman"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.11/mcp-ssh-wingman_0.0.11_Linux_arm64.tar.gz"
-      sha256 "bb2dfdb73356afc5510773baf1c1c1bff7468b8f7a4ed9bfbfe5a0883352cb46"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Linux_arm64.tar.gz"
+      sha256 "bfd39084e7c8b197cc84a75e0d4c6c7fe15ff9d11f04969355066b30f01aa140"
       def install
         bin.install "mcp-ssh-wingman"
       end
