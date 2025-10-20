@@ -11,7 +11,7 @@ class McpOmnifocus < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.2/mcp-omnifocus_0.0.2_darwin_x86_64.tar.gz"
-    sha256 "15be80a6f3ca1f6934be84f7ab44ba2e30982c9d8f58da3e2e90ace5a58ab66c"
+    sha256 "1f060ba3748f457687ea46498ab9b43800026829886f0b68881052e712efa4ba"
 
     def install
       bin.install "mcp-omnifocus"
@@ -21,7 +21,7 @@ class McpOmnifocus < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.2/mcp-omnifocus_0.0.2_darwin_arm64.tar.gz"
-    sha256 "6fa66f962f69b72956537f7799810cf06e505a179ca99fe2e479c95938134ec1"
+    sha256 "1041f22eb4598a61cf2ae38ced1a368a710e50ff8577aa0ae954e8727b88133a"
 
     def install
       bin.install "mcp-omnifocus"
