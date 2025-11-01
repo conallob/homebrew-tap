@@ -5,21 +5,21 @@
 class McpGoogleSheets < Formula
   desc "MCP server for Google Sheets API integration"
   homepage "https://github.com/conallob/mcp-google-sheets"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.1/mcp-google-sheets_0.0.1_Darwin_x86_64.tar.gz"
-      sha256 "5374a35b7ddbf9bec3d3b4a0cc027739498dbd82545a621ef86780252d435436"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Darwin_x86_64.tar.gz"
+      sha256 "9b2b64d8253c75f4637db1678580d087233c579ccf903e5efafc59b1d571543e"
 
       def install
         bin.install "mcp-google-sheets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.1/mcp-google-sheets_0.0.1_Darwin_arm64.tar.gz"
-      sha256 "bba52bb55f0b7f8460904df69f6f45a57269fe47c58cb149c49231c479632fe6"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Darwin_arm64.tar.gz"
+      sha256 "5799107b3076e366cbe0cf0542093b0fe427e8b2051104edf5bbac01d5fb0587"
 
       def install
         bin.install "mcp-google-sheets"
@@ -29,15 +29,15 @@ class McpGoogleSheets < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.1/mcp-google-sheets_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "d5943d6c1e7edf41cd101b06d4ae68b79f1fb90570f760401367d4b90b01b38b"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "6c50dcd70d2b08c45ecc599d38a9db8224a6ea4921efe6323f2b1b6cb4516476"
       def install
         bin.install "mcp-google-sheets"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.1/mcp-google-sheets_0.0.1_Linux_arm64.tar.gz"
-      sha256 "e510bd0bc0adb820c4fd6cf140445d9d65a78377946395dd51d4d50951894687"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Linux_arm64.tar.gz"
+      sha256 "67b3d2cac4d258cfbd3e562c59fbf50209deab0b244af05d019bb8650948981e"
       def install
         bin.install "mcp-google-sheets"
       end
