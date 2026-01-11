@@ -1,0 +1,100 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Formula/*.rb'
+
+jobs:
+  update-readme:
+    # Only run when pushed by goreleaser-bot
+    if: github.actor == 'goreleaser-bot' || github.actor == 'goreleaserbot'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate README
+        run: |
+          cat > README.md << 'EOF'
+          # Homebrew Tap for conallob
+
+          This is a Homebrew tap for various tools and MCP servers.
+
+          ## Installation
+
+          ```bash
+          brew tap conallob/tap
+          brew install <formula-name>
+          ```
+
+          ## Available Formulae
+
+          EOF
+
+          # Extract information from each formula
+          for formula in Formula/*.rb; do
+            if [ -f "$formula" ]; then
+              # Extract the formula name (class name converted to kebab-case)
+              filename=$(basename "$formula" .rb)
+
+              # Extract description
+              desc=$(grep -m 1 '^\s*desc' "$formula" | sed 's/.*desc "\(.*\)"/\1/')
+
+              # Extract homepage
+              homepage=$(grep -m 1 '^\s*homepage' "$formula" | sed 's/.*homepage "\(.*\)"/\1/')
+
+              # Add to README
+              echo "### \`$filename\`" >> README.md
+              echo "" >> README.md
+              if [ -n "$desc" ]; then
+                echo "$desc" >> README.md
+                echo "" >> README.md
+              fi
+              if [ -n "$homepage" ]; then
+                echo "**Homepage:** $homepage" >> README.md
+                echo "" >> README.md
+              fi
+              echo "**Installation:**" >> README.md
+              echo "\`\`\`bash" >> README.md
+              echo "brew install conallob/tap/$filename" >> README.md
+              echo "\`\`\`" >> README.md
+              echo "" >> README.md
+            fi
+          done
+
+          cat >> README.md << 'EOF'
+          ## Automated Updates
+
+          The formulae in this tap are automatically updated by [GoReleaser](https://goreleaser.com/)
+          when new releases are published to their respective repositories.
+
+          This README is automatically regenerated when formulae are updated.
+          EOF
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet README.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-update README with current formulae"
+          git push
