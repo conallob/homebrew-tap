@@ -55,6 +55,17 @@ MCP Server for read-only access to Unix shell prompts via tmux
 brew install conallob/tap/mcp-ssh-wingman
 ```
 
+### `o11y-analysis-tools`
+
+Static analysis and testing tools for PromQL-compatible monitoring systems
+
+**Homepage:** https://github.com/conallob/o11y-analysis-tools
+
+**Installation:**
+```bash
+brew install conallob/tap/o11y-analysis-tools
+```
+
 ## Automated Updates
 
 The formulae in this tap are automatically updated by [GoReleaser](https://goreleaser.com/)
