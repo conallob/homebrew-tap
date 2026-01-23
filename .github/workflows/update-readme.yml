@@ -9,8 +9,8 @@ on:
 
 jobs:
   update-readme:
-    # Only run when pushed by goreleaser-bot
-    if: github.actor == 'goreleaser-bot' || github.actor == 'goreleaserbot'
+    # Only run when commit is authored by goreleaserbot
+    if: github.event.head_commit.author.name == 'goreleaserbot'
     runs-on: ubuntu-latest
 
     permissions:
