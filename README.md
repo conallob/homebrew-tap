@@ -55,6 +55,17 @@ MCP Server for read-only access to Unix shell prompts via tmux
 brew install conallob/tap/mcp-ssh-wingman
 ```
 
+### `mcp-toshl`
+
+MCP Server for accessing Toshl Finance transaction data
+
+**Homepage:** https://github.com/conallob/mcp-toshl
+
+**Installation:**
+```bash
+brew install conallob/tap/mcp-toshl
+```
+
 ### `o11y-analysis-tools`
 
 Static analysis and testing tools for PromQL-compatible monitoring systems
