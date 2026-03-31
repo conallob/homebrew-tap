@@ -5,23 +5,23 @@
 class JiraBeadsSync < Formula
   desc "Sync Jira task trees with beads issues (bidirectional)"
   homepage "https://github.com/conallob/jira-beads-sync"
-  version "0.0.5"
+  version "0.0.7"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.5/jira-beads-sync_0.0.5_Darwin_x86_64.tar.gz"
-      sha256 "f83714b4d6eca52d820f2225606dc59ba4cdd7152800dd0384e90158824bf75a"
+      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.7/jira-beads-sync_0.0.7_Darwin_x86_64.tar.gz"
+      sha256 "01cd4bc6ec92af03251dc08381e68b6b79d4b62c37017e5dae4c9a1b2ac52a1b"
 
-      def install
+      define_method(:install) do
         bin.install "jira-beads-sync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.5/jira-beads-sync_0.0.5_Darwin_arm64.tar.gz"
-      sha256 "84e58fff3269f39237a8fb7919684450f9891b6fa74a2a19bbd522cf90356eef"
+      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.7/jira-beads-sync_0.0.7_Darwin_arm64.tar.gz"
+      sha256 "7afc9e4ea3bc4a426bfb9b443166e205cd9aee2018f120be2698a06a606f2ca4"
 
-      def install
+      define_method(:install) do
         bin.install "jira-beads-sync"
       end
     end
@@ -29,16 +29,16 @@ class JiraBeadsSync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.5/jira-beads-sync_0.0.5_Linux_x86_64.tar.gz"
-      sha256 "018a77073f580cda83434e6f88b26380cd39435287441d966bf7575199f06296"
-      def install
+      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.7/jira-beads-sync_0.0.7_Linux_x86_64.tar.gz"
+      sha256 "bfa42b670ce18703cdfd89f29de63aba49b25a4fad68edfe8c231e911bcf220a"
+      define_method(:install) do
         bin.install "jira-beads-sync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.5/jira-beads-sync_0.0.5_Linux_arm64.tar.gz"
-      sha256 "adb13c7681640b86e77f4c5aeba8ea276359ac1282f7331d83f96248310862e2"
-      def install
+      url "https://github.com/conallob/jira-beads-sync/releases/download/v0.0.7/jira-beads-sync_0.0.7_Linux_arm64.tar.gz"
+      sha256 "00d0a2ae4570aa67b03888f0f2599d5ede1c14cef9f6d1773a94d3189503cee9"
+      define_method(:install) do
         bin.install "jira-beads-sync"
       end
     end
