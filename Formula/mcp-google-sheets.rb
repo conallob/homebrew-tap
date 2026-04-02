@@ -5,23 +5,23 @@
 class McpGoogleSheets < Formula
   desc "MCP server for Google Sheets API integration"
   homepage "https://github.com/conallob/mcp-google-sheets"
-  version "0.0.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "9b2b64d8253c75f4637db1678580d087233c579ccf903e5efafc59b1d571543e"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v1.0.0/mcp-google-sheets_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "bf3abb2dc376ee741642d8b3de223e8f18a94ddeaae71ebcecfb26d9e73e720c"
 
-      def install
+      define_method(:install) do
         bin.install "mcp-google-sheets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "5799107b3076e366cbe0cf0542093b0fe427e8b2051104edf5bbac01d5fb0587"
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v1.0.0/mcp-google-sheets_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "95e4485bbfb6fb8ee9e7a5a69860fdad27b209ce41a06d14db71f91433aad34e"
 
-      def install
+      define_method(:install) do
         bin.install "mcp-google-sheets"
       end
     end
@@ -29,16 +29,16 @@ class McpGoogleSheets < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "6c50dcd70d2b08c45ecc599d38a9db8224a6ea4921efe6323f2b1b6cb4516476"
-      def install
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v1.0.0/mcp-google-sheets_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "1c1e5a9db32578d9e072bcfb6cb5e501b2195d1a531c44ee21bbcf1e7fa30031"
+      define_method(:install) do
         bin.install "mcp-google-sheets"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-google-sheets/releases/download/v0.0.2/mcp-google-sheets_0.0.2_Linux_arm64.tar.gz"
-      sha256 "67b3d2cac4d258cfbd3e562c59fbf50209deab0b244af05d019bb8650948981e"
-      def install
+      url "https://github.com/conallob/mcp-google-sheets/releases/download/v1.0.0/mcp-google-sheets_1.0.0_Linux_arm64.tar.gz"
+      sha256 "64a5b0a8eebf4ef263d7bc466b2eb9071133f73ffb9bad54005407cf332ac991"
+      define_method(:install) do
         bin.install "mcp-google-sheets"
       end
     end
