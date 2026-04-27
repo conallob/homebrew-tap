@@ -33,6 +33,17 @@ MCP server for Google Sheets API integration
 brew install conallob/tap/mcp-google-sheets
 ```
 
+### `mcp-jetkvm`
+
+MCP server for JetKVM device control, screenshots, and video capture
+
+**Homepage:** https://github.com/conallob/mcp-jetkvm
+
+**Installation:**
+```bash
+brew install conallob/tap/mcp-jetkvm
+```
+
 ### `mcp-omnifocus`
 
 MCP server for interacting with OmniFocus Pro through its automation API
