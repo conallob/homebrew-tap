@@ -5,12 +5,12 @@
 class CodingInterviewPatternDrill < Formula
   desc "Pattern recognition trainer for coding interviews — CLI and browser UI"
   homepage "https://github.com/conallob/coding-interview-pop-quiz"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
-    url "https://github.com/conallob/coding-interview-pop-quiz/releases/download/v0.0.1/coding-interview-pattern-drill_Darwin_all.tar.gz"
-    sha256 "a09c139b569b6cabc2dd4bb060b9d3a6adf08c496699737d7b271652f02af83d"
+    url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Darwin_all.tar.gz"
+    sha256 "d75a70ce587697e53717c0813f9aafb100aab6ca17df2c9fc91b49b08de541b7"
 
     define_method(:install) do
       bin.install "coding-interview-pattern-drill"
@@ -19,15 +19,15 @@ class CodingInterviewPatternDrill < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/coding-interview-pop-quiz/releases/download/v0.0.1/coding-interview-pattern-drill_Linux_x86_64.tar.gz"
-      sha256 "756ad37fec7f73dcd7a382d27d0d50273baf20492b1d4b9a75e7a9e5fd6cacbd"
+      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Linux_x86_64.tar.gz"
+      sha256 "db7aa8baa0952b412ef97deff1251f0867bae45d57708879c332c60d2cf3225e"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/coding-interview-pop-quiz/releases/download/v0.0.1/coding-interview-pattern-drill_Linux_arm64.tar.gz"
-      sha256 "eef8029a780685c50b560955bd263efb6f177706f87203f373cce7db275564d9"
+      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Linux_arm64.tar.gz"
+      sha256 "97e375a2f8c21ebcd2643c551e65381d790a047825b92a579abc23154b0f583d"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
