@@ -11,6 +11,17 @@ brew install <formula-name>
 
 ## Available Formulae
 
+### `coding-interview-pattern-drill`
+
+Pattern recognition trainer for coding interviews — CLI and browser UI
+
+**Homepage:** https://github.com/conallob/coding-interview-pop-quiz
+
+**Installation:**
+```bash
+brew install conallob/tap/coding-interview-pattern-drill
+```
+
 ### `jira-beads-sync`
 
 Sync Jira task trees with beads issues (bidirectional)
