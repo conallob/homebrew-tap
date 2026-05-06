@@ -10,7 +10,7 @@ class CodingInterviewPatternDrill < Formula
 
   on_macos do
     url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Darwin_all.tar.gz"
-    sha256 "d75a70ce587697e53717c0813f9aafb100aab6ca17df2c9fc91b49b08de541b7"
+    sha256 "958feb8fbcdfa716ad15613fde20010bd63135cd450556f692d427c5d0a4cc87"
 
     define_method(:install) do
       bin.install "coding-interview-pattern-drill"
@@ -20,14 +20,14 @@ class CodingInterviewPatternDrill < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Linux_x86_64.tar.gz"
-      sha256 "db7aa8baa0952b412ef97deff1251f0867bae45d57708879c332c60d2cf3225e"
+      sha256 "c8f6d56a02ea348696b43df083ccde98b429f98566d775668e26c53ecacc1f96"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.2/coding-interview-pattern-drill_Linux_arm64.tar.gz"
-      sha256 "97e375a2f8c21ebcd2643c551e65381d790a047825b92a579abc23154b0f583d"
+      sha256 "42fdc30c6edbe2fd750205fc482892563a8c2ec01b532f1d4078ab6f26a59d23"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
