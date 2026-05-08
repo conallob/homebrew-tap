@@ -1,0 +1,23 @@
+name: Validate Formula Location
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-formula-location:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for Ruby formula files outside Formula/
+        run: |
+          misplaced=$(find . -name "*.rb" -not -path "./.git/*" -not -path "./Formula/*")
+          if [ -n "$misplaced" ]; then
+            echo "ERROR: Ruby formula files found outside the Formula/ directory:"
+            echo "$misplaced"
+            exit 1
+          fi
+          echo "All formula files are correctly located under Formula/"
