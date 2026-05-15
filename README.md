@@ -66,6 +66,17 @@ MCP server for interacting with OmniFocus Pro through its automation API
 brew install conallob/tap/mcp-omnifocus
 ```
 
+### `mcp-redfish`
+
+Local MCP server for interacting with server BMCs via the Redfish API
+
+**Homepage:** https://github.com/conallob/mcp-redfish
+
+**Installation:**
+```bash
+brew install conallob/tap/mcp-redfish
+```
+
 ### `mcp-ssh-wingman`
 
 MCP Server for read-only access to Unix shell prompts via tmux
