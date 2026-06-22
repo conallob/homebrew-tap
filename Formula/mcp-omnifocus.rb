@@ -5,25 +5,25 @@
 class McpOmnifocus < Formula
   desc "MCP server for interacting with OmniFocus Pro through its automation API"
   homepage "https://github.com/conall/mcp-omnifocus"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.6/mcp-omnifocus_0.0.6_darwin_x86_64.tar.gz"
-    sha256 "56f32a348da2bb82096e8d2ab9a9d7417319bf3d1241d5cd1ff3a7d73230d39c"
+    url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.7/mcp-omnifocus_0.0.7_darwin_x86_64.tar.gz"
+    sha256 "b85e8b2a7209cb4b5b09a687dd35b2c1e914e14b0540d5841ad424852b4ec489"
 
-    def install
+    define_method(:install) do
       bin.install "mcp-omnifocus"
       (share/"mcp-omnifocus").install Dir["scripts/*.jxa"]
       (share/"mcp-omnifocus").install "config-example.json"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.6/mcp-omnifocus_0.0.6_darwin_arm64.tar.gz"
-    sha256 "80697bce4f849e80557cea14e4cecadc04589b1e49f7e0f6f5f21a8c81421f7c"
+    url "https://github.com/conallob/mcp-omnifocus/releases/download/v0.0.7/mcp-omnifocus_0.0.7_darwin_arm64.tar.gz"
+    sha256 "fa10875d0746066e0e348c14231aca7f32c75ce585d8d900a7d695af3abf6126"
 
-    def install
+    define_method(:install) do
       bin.install "mcp-omnifocus"
       (share/"mcp-omnifocus").install Dir["scripts/*.jxa"]
       (share/"mcp-omnifocus").install "config-example.json"
