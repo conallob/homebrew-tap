@@ -5,23 +5,23 @@
 class McpJetkvm < Formula
   desc "MCP server for JetKVM device control, screenshots, and video capture"
   homepage "https://github.com/conallob/mcp-jetkvm"
-  version "0.0.2"
+  version "0.0.3"
   license "BSD-3-Clause"
 
   depends_on "ffmpeg"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.2/mcp-jetkvm_darwin_amd64.tar.gz"
-      sha256 "ece545838e2c3d7969c9bcaa19e60f69ba9e54bca188ac7368196e224893c514"
+      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.3/mcp-jetkvm_darwin_amd64.tar.gz"
+      sha256 "1d041f8c2e67edb005aa56efad508704a68df23993f9a00c5e90eb9ab0c7616c"
 
       define_method(:install) do
         bin.install "mcp-jetkvm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.2/mcp-jetkvm_darwin_arm64.tar.gz"
-      sha256 "97eade8dc197007405c8e799315758457afbd2fdd536099bb860f85a3e697092"
+      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.3/mcp-jetkvm_darwin_arm64.tar.gz"
+      sha256 "e9f13f0b87f4127c0f7d306ca48e91585f60709e1d3e31f4b4e7ddd06f414151"
 
       define_method(:install) do
         bin.install "mcp-jetkvm"
@@ -31,15 +31,15 @@ class McpJetkvm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.2/mcp-jetkvm_linux_amd64.tar.gz"
-      sha256 "c970275232365d5471028ccc30acac29fb273c9025fa43c74ac08926eab0116c"
+      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.3/mcp-jetkvm_linux_amd64.tar.gz"
+      sha256 "82ff418167acc6d46c5f2ea48c8587219e6ea02c2eb6f7f91c8119e7522f35da"
       define_method(:install) do
         bin.install "mcp-jetkvm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.2/mcp-jetkvm_linux_arm64.tar.gz"
-      sha256 "4af5dac24062219f05862cf31ce22646da9369c832efed112b441d5c1551062a"
+      url "https://github.com/conallob/mcp-jetkvm/releases/download/v0.0.3/mcp-jetkvm_linux_arm64.tar.gz"
+      sha256 "b900ccfd4f317ed85b7c10fea48e7addf98fe76eda6af559c81c8ee8eee2731a"
       define_method(:install) do
         bin.install "mcp-jetkvm"
       end
