@@ -110,6 +110,17 @@ Static analysis and testing tools for PromQL-compatible monitoring systems
 brew install conallob/tap/o11y-analysis-tools
 ```
 
+### `peridot`
+
+Cache-aware, multi-source wallpaper rotation daemon
+
+**Homepage:** https://github.com/conallob/peridot
+
+**Installation:**
+```bash
+brew install conallob/tap/peridot
+```
+
 ## Automated Updates
 
 The formulae in this tap are automatically updated by [GoReleaser](https://goreleaser.com/)
