@@ -5,12 +5,12 @@
 class CodingInterviewPatternDrill < Formula
   desc "Pattern recognition trainer for coding interviews — CLI and browser UI"
   homepage "https://github.com/conallob/coding-interview-pattern-drill"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
-    url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.5/coding-interview-pattern-drill_Darwin_all.tar.gz"
-    sha256 "e07e2708cab02ba328e8b6527d01405ce77de190855cf2e1a3df50071879ddab"
+    url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.6/coding-interview-pattern-drill_Darwin_all.tar.gz"
+    sha256 "bdc8e1b86da407500cc7c939e71b05adadcc611c036564e50b3c8cb0af518f50"
 
     define_method(:install) do
       bin.install "coding-interview-pattern-drill"
@@ -19,15 +19,15 @@ class CodingInterviewPatternDrill < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.5/coding-interview-pattern-drill_Linux_x86_64.tar.gz"
-      sha256 "62cb95962f52ffee1712ea996cc3251f642760b5b7f595e066e12882bb8dd1fd"
+      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.6/coding-interview-pattern-drill_Linux_x86_64.tar.gz"
+      sha256 "fa3f61bda2884602d04ff1926f650a4b2c55302cec88ffae54a96b3c5eff2d00"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.5/coding-interview-pattern-drill_Linux_arm64.tar.gz"
-      sha256 "99b3aeef68de5e53262e8e42058afbe02227b476f9e65dbfa452cec72f9add72"
+      url "https://github.com/conallob/coding-interview-pattern-drill/releases/download/v0.0.6/coding-interview-pattern-drill_Linux_arm64.tar.gz"
+      sha256 "d665ab2295b629260ff7804e8301d5c84b248fd12217c9b3b78df395cbf3226c"
       define_method(:install) do
         bin.install "coding-interview-pattern-drill"
       end
