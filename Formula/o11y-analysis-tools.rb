@@ -5,13 +5,13 @@
 class O11yAnalysisTools < Formula
   desc "Static analysis and testing tools for PromQL-compatible monitoring systems"
   homepage "https://github.com/conallob/o11y-analysis-tools"
-  version "0.0.9"
+  version "0.0.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.9/o11y-analysis-tools_0.0.9_Darwin_x86_64.tar.gz"
-      sha256 "42edc5936da9d273d5367fafb29e63036a9f0a66552940e24054e30758b87a11"
+      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.10/o11y-analysis-tools_0.0.10_Darwin_x86_64.tar.gz"
+      sha256 "a8c0cc11f6f69f206e9cbb5a85018dba82238b7103be5ba9b5cfed93e0855845"
 
       define_method(:install) do
         bin.install "promql-fmt"
@@ -23,8 +23,8 @@ class O11yAnalysisTools < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.9/o11y-analysis-tools_0.0.9_Darwin_arm64.tar.gz"
-      sha256 "e6d5d3150a6124aa6cac48e76ae7e0bbcbc6005f27ebefebbecbadadbaa8f951"
+      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.10/o11y-analysis-tools_0.0.10_Darwin_arm64.tar.gz"
+      sha256 "788e4055796a7b1f7aef481bb7d88f94851c357f13bd0df02506f992f35e393a"
 
       define_method(:install) do
         bin.install "promql-fmt"
@@ -39,8 +39,8 @@ class O11yAnalysisTools < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.9/o11y-analysis-tools_0.0.9_Linux_x86_64.tar.gz"
-      sha256 "36168d5d45b60d38e5ed1d71292f723e96dd6e402691e0427181a896c73bac1a"
+      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.10/o11y-analysis-tools_0.0.10_Linux_x86_64.tar.gz"
+      sha256 "6c1642752277554c8a5db518c1661d8ea1e2d7f82b4d4a94d65e3999be0c32fa"
       define_method(:install) do
         bin.install "promql-fmt"
         bin.install "label-check"
@@ -51,8 +51,8 @@ class O11yAnalysisTools < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.9/o11y-analysis-tools_0.0.9_Linux_arm64.tar.gz"
-      sha256 "8af737a17d7687faec8d08bfb0fd57fed2d1f1aca6f48847fbd819565d5b67c3"
+      url "https://github.com/conallob/o11y-analysis-tools/releases/download/v0.0.10/o11y-analysis-tools_0.0.10_Linux_arm64.tar.gz"
+      sha256 "7c1cca930da7c1e03602af6ef127dc550480bb4c2a0117a6bc85e522eb390a88"
       define_method(:install) do
         bin.install "promql-fmt"
         bin.install "label-check"
