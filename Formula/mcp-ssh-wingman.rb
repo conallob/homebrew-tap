@@ -5,25 +5,25 @@
 class McpSshWingman < Formula
   desc "MCP Server for read-only access to Unix shell prompts via tmux"
   homepage "https://github.com/conallob/mcp-ssh-wingman"
-  version "0.0.12"
+  version "0.0.13"
   license "BSD-3-Clause"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Darwin_x86_64.tar.gz"
-      sha256 "3c368e48f287b11e119a8d38ccb3f0199b815593282ccf3d230f2b07d76d036d"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.13/mcp-ssh-wingman_0.0.13_Darwin_x86_64.tar.gz"
+      sha256 "622b4f1e0c541637c1f760b63d47cd2e12dfd41d9f701e26d1d0f331ab81e545"
 
-      def install
+      define_method(:install) do
         bin.install "mcp-ssh-wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Darwin_arm64.tar.gz"
-      sha256 "800486548f978f5f6c3e6ddd4a8253dd50a3deaeafc4111fa06dc0bde1bf124a"
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.13/mcp-ssh-wingman_0.0.13_Darwin_arm64.tar.gz"
+      sha256 "194b425a10dd7d2bdb1a92416ce40c4b2abfa9e945d390fcd18fd47060f6148d"
 
-      def install
+      define_method(:install) do
         bin.install "mcp-ssh-wingman"
       end
     end
@@ -31,16 +31,16 @@ class McpSshWingman < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Linux_x86_64.tar.gz"
-      sha256 "9a3fdfe642cdbfe24f689a18d48ced9370540cdb59070f67fec092b000968ce9"
-      def install
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.13/mcp-ssh-wingman_0.0.13_Linux_x86_64.tar.gz"
+      sha256 "48a8631e539bbb314d46066dc157c7c1b6dc44e90c327f6f505f37d8f7ddb125"
+      define_method(:install) do
         bin.install "mcp-ssh-wingman"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.12/mcp-ssh-wingman_0.0.12_Linux_arm64.tar.gz"
-      sha256 "bfd39084e7c8b197cc84a75e0d4c6c7fe15ff9d11f04969355066b30f01aa140"
-      def install
+      url "https://github.com/conallob/mcp-ssh-wingman/releases/download/v0.0.13/mcp-ssh-wingman_0.0.13_Linux_arm64.tar.gz"
+      sha256 "a6d7fde147fdd5e3d2eb79ddd2ba1d3c24e2789218c45531221d62ca34f4faf4"
+      define_method(:install) do
         bin.install "mcp-ssh-wingman"
       end
     end
